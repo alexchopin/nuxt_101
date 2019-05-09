@@ -3,7 +3,7 @@
     <b-container>
       <h1>Articles</h1>
       <b-nav vertical>
-        <b-nav-item v-for="post in posts" :key="post.slug" :to="{ name: 'blog-slug', params: { slug: post.slug }}">
+        <b-nav-item v-for="post in posts" :key="post.id" :to="{ name: 'blog-slug', params: { slug: post.id }}">
           {{ post.title }}
         </b-nav-item>
       </b-nav>
@@ -21,13 +21,10 @@ export default {
       ]
     }
   },
-  data () {
+  async asyncData ({ app }) {
+    let posts = await app.$axios.$get('https://jsonplaceholder.typicode.com/posts')
     return {
-      posts: [
-        { title: 'Hello', slug: 'hello' },
-        { title: 'Hallo', slug: 'hallo' },
-        { title: 'Bonjour', slug: 'bonjour' }
-      ]
+      posts
     }
   }
 }
