@@ -8,3 +8,16 @@
     </b-container>
   </section>
 </template>
+
+<script>
+export default {
+  head () {
+    return {
+      title: 'À propos',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Salut, ceci est une description à propos de moi!' }
+      ]
+    }
+  }
+}
+</script>

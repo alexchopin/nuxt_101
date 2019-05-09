@@ -14,9 +14,3 @@ export default {
   }
 }
 </script>
-
-<style>
-section {
-  padding: 2rem 0;
-}
-</style>

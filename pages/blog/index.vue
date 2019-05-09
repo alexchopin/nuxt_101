@@ -13,6 +13,14 @@
 
 <script>
 export default {
+  head () {
+    return {
+      title: 'Blog',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Mon super Blog' }
+      ]
+    }
+  },
   data () {
     return {
       posts: [

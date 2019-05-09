@@ -10,3 +10,16 @@
     </b-container>
   </section>
 </template>
+
+<script>
+export default {
+  head () {
+    return {
+      title: this.$route.params.slug,
+      meta: [
+        { hid: 'description', name: 'description', content: 'Mon super article' }
+      ]
+    }
+  }
+}
+</script>
